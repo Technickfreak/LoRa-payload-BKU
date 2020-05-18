@@ -46,6 +46,7 @@ Arbeitsweise:
 
 ## Unterstütze Daten Formate
 ELSYS.se kopatiebel
+**test**
 ``` 
 **TYPE_TEMP**           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
 **TYPE_RH**             = 0x02;  //Humidity;            1 byte;     0 decimal place;    0->100%;
