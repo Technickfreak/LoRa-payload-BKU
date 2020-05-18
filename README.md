@@ -6,9 +6,9 @@ Diese Library erlaubt es vorgefertigete Datentyppen an The Things Network zu sen
 ## Arbeitsweise:
 
 ### Schritt1.
-    Initialisiere ein Objekt vom Type "payload" mit einem frei Wählbaren Namen,
-    gib in den Klammern die Anzahl der zu übertragenden Datensätzen pro Sendung an.
-            paylaod meinpayload[2];
+Initialisiere ein Objekt vom Type "payload" mit einem frei Wählbaren Namen,
+gib in den Klammern die Anzahl der zu übertragenden Datensätzen pro Sendung an.
+        paylaod meinpayload[2];
 
 ### Schritt2.
 Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du 
@@ -21,7 +21,6 @@ Nr1 (Zeilenweise Befüllung)
     meinpayload[0].wert = (-15.5);
     meinpayload[1].TYPE = TYPE_RH;
     meinpayload[1].wert = (27);
-
 
 
 Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
