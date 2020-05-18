@@ -16,11 +16,12 @@ Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
 Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
 Alle 3 Möglichkeitren führen zum Selben Ergebniss.
 Nr1 (Zeilenweise Befüllung)
-       
+   
     meinpayload[0].TYPE = TYPE_TEMP;
     meinpayload[0].wert = (-15.5);
     meinpayload[1].TYPE = TYPE_RH;
     meinpayload[1].wert = (27);
+
 
 
 Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
