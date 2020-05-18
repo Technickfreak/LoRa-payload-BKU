@@ -11,34 +11,34 @@ Diese Library erlaubt es vorgefertigete Datentyppen an The Things Network zu sen
             paylaod meinpayload[2];
 
 ### Schritt2.
-    Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du 
-    Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
-    Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
-    Alle 3 Möglichkeitren führen zum Selben Ergebniss.
-        Nr1 (Zeilenweise Befüllung)
-        ```       
-        meinpayload[0].TYPE = TYPE_TEMP;
-        meinpayload[0].wert = (-15.5);
-        meinpayload[1].TYPE = TYPE_RH;
-        meinpayload[1].wert = (27);
-        ```
-        
-        Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
-        ```
-        payload meinpayload[] = {
-                                payload(TYPE_TEMP, -15.5),
-                                payload(TYPE_RH, 27),
-                                };
-        ```
-        
-        Nr3 (Blockweise Befüllung z.B aus einem String)
-        ```
-        payload meinpayload[] = {
-                                {TYPE_TEMP, -15.5},
-                                {TYPE_RH, 27},
-                                };
+Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du 
+Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
+Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
+Alle 3 Möglichkeitren führen zum Selben Ergebniss.
+    Nr1 (Zeilenweise Befüllung)
+    ```       
+    meinpayload[0].TYPE = TYPE_TEMP;
+    meinpayload[0].wert = (-15.5);
+    meinpayload[1].TYPE = TYPE_RH;
+    meinpayload[1].wert = (27);
+    ```
+    
+    Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
+    ```
+    payload meinpayload[] = {
+                            payload(TYPE_TEMP, -15.5),
+                            payload(TYPE_RH, 27),
+                            };
+    ```
+    
+    Nr3 (Blockweise Befüllung z.B aus einem String)
+    ```
+    payload meinpayload[] = {
+                            {TYPE_TEMP, -15.5},
+                            {TYPE_RH, 27},
+                            };
 
-        ```
+    ```
 
 
 
@@ -46,7 +46,7 @@ Diese Library erlaubt es vorgefertigete Datentyppen an The Things Network zu sen
 
 ## Unterstütze Daten Formate
 ELSYS.se kopatiebel
-**test**
+**test*
 ``` 
 **TYPE_TEMP**           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
 **TYPE_RH**             = 0x02;  //Humidity;            1 byte;     0 decimal place;    0->100%;
