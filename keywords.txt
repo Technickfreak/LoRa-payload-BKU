@@ -1,0 +1,63 @@
+#######################################
+# Syntax Coloring Map For LoRa_mkr_wan and Encoder_TYPE
+####################################### 
+# Class and struct
+#######################################
+
+payload             KEYWORD1
+
+
+#######################################
+# Methods and Functions 
+#######################################	
+
+setupLorawan	    KEYWORD2
+sendData	        KEYWORD2
+sendPayload	        KEYWORD2
+printMSG	        KEYWORD2
+receiveData	        KEYWORD2
+
+payloadconverter	KEYWORD2
+payloadlength	    KEYWORD2
+printPayload	    KEYWORD2
+
+
+
+#######################################
+# Constants
+#######################################
+
+TYPE_TEMP	        LITERAL1
+TYPE_RH	            LITERAL1
+TYPE_ACC	        LITERAL1
+TYPE_LIGHT	        LITERAL1
+TYPE_MOTION	        LITERAL1
+TYPE_CO2	        LITERAL1
+TYPE_VDD	        LITERAL1
+TYPE_ANALOG1	    LITERAL1
+TYPE_GPS	        LITERAL1
+TYPE_PULSE1	        LITERAL1
+TYPE_PULSE1_ABS	    LITERAL1
+TYPE_EXT_TEMP1	    LITERAL1
+TYPE_EXT_DIGITAL	LITERAL1
+TYPE_EXT_DISTANCE	LITERAL1
+TYPE_ACC_MOTION	    LITERAL1
+TYPE_IR_TEMP	    LITERAL1
+TYPE_OCCUPANCY	    LITERAL1
+TYPE_WATERLEAK	    LITERAL1
+TYPE_GRIDEYE	    LITERAL1
+TYPE_PRESSURE	    LITERAL1
+TYPE_SOUND	        LITERAL1
+TYPE_PULSE2	        LITERAL1
+TYPE_PULSE2_ABS	    LITERAL1
+TYPE_ANALOG2	    LITERAL1
+TYPE_EXT_TEMP2	    LITERAL1
+TYPE_EXT_DIGITAL2	LITERAL1
+TYPE_EXT_ANALOG_UV	LITERAL1
+TYPE_DEBUG	        LITERAL1
+
+
+TYPE_TEMP32	        LITERAL1
+TYPE_RH32	        LITERAL1
+TYPE_GAS_KOHMS	    LITERAL1
+TYPE_sign_of_life	LITERAL1
