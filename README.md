@@ -15,30 +15,30 @@ Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du
 Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
 Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
 Alle 3 Möglichkeitren führen zum Selben Ergebniss.
-    Nr1 (Zeilenweise Befüllung)
-    ```       
+Nr1 (Zeilenweise Befüllung)
+       
     meinpayload[0].TYPE = TYPE_TEMP;
     meinpayload[0].wert = (-15.5);
     meinpayload[1].TYPE = TYPE_RH;
     meinpayload[1].wert = (27);
-    ```
-    
-    Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
-    ```
+
+
+Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
+
     payload meinpayload[] = {
                             payload(TYPE_TEMP, -15.5),
                             payload(TYPE_RH, 27),
                             };
-    ```
-    
-    Nr3 (Blockweise Befüllung z.B aus einem String)
-    ```
+
+
+Nr3 (Blockweise Befüllung z.B aus einem String)
+
     payload meinpayload[] = {
                             {TYPE_TEMP, -15.5},
                             {TYPE_RH, 27},
                             };
 
-    ```
+
 
 
 
