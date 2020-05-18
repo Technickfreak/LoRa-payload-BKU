@@ -7,8 +7,9 @@
 //use your secrets.h file or enter appEui & appKey below
 //  #include secrets.h
 
-    String appEui = "70B3D57ED0029F3D";
-    String appKey = "F0CD3364EEBD105757610701EF578F15";
+    String appEui = "****************";
+    String appKey = "********************************";
+    
 //set your frequenze plan values are: (EU868,AS923,AU915,KR920,IN865,US915,US915_HYBRID)
     _lora_band frequency = EU868;
 
