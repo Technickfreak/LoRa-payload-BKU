@@ -15,8 +15,8 @@ gib in den Klammern die Anzahl der zu übertragenden Datensätzen pro Sendung an
         paylaod meinpayload[2];
 
 ### Schritt2.
-Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du 
-Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
+Befülle dein Payload Objekt mit deinen Sensorwerten. Dazu übergibst du 
+Erstens den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
 Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
 Alle 3 Möglichkeitren führen zum Selben Ergebniss.
 Nr1 (Zeilenweise Befüllung)
@@ -27,7 +27,7 @@ Nr1 (Zeilenweise Befüllung)
     meinpayload[1].wert = (27);
 
 
-Nr2 (Blockweise Befüllung mit Aufruf des Datentypen)
+Nr2 (Blockweise Befüllung mit Aufruf des Konstruktor)
 
     payload meinpayload[] = {
                             payload(TYPE_TEMP, -15.5),
@@ -48,8 +48,8 @@ Nr3 (Blockweise Befüllung z.B aus einem String)
 
 
 
-## Unterstütze Daten Formate
-ELSYS.se kopatiebel
+## Unterstütze Datenformate
+ELSYS.se kompatiebel
 ``` 
 TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
 TYPE_RH             = 0x02;  //Humidity;            1 byte;     0 decimal place;    0->100%;
@@ -80,7 +80,7 @@ TYPE_EXT_DIGITAL2   = 0x1A;  //Digital input 2      1 bytes;    0 decimal place;
 TYPE_EXT_ANALOG_UV  = 0x1B;  //Load cell analog uV  4 bytes;    0 decimal place;                                        signed int (uV)
 TYPE_DEBUG          = 0x3D;  //debug                4 bytes;    0 decimal place;                                        debug
 ```
-Eigene erweiterungen
+Eigene Erweiterungen
 ```
 TYPE_TEMP32		    = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
 TYPE_RH32           = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
