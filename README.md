@@ -28,7 +28,7 @@ Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
 Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
 Alle 3 Möglichkeitren führen zum Selben Ergebniss.
 Nr1 (Zeilenweise Befüllung)
-    payload testpayload[2];
+    BkuPayload testpayload[2];
     meinpayload[0].TYPE = TYPE_TEMP;
     meinpayload[0].wert = (-15.5);
     meinpayload[1].TYPE = TYPE_RH;
@@ -36,14 +36,14 @@ Nr1 (Zeilenweise Befüllung)
 
 2 using the constructor
 
-    payload meinpayload[] = {
+    BkuPayload meinpayload[] = {
                             payload(TYPE_TEMP, -15.5),
                             payload(TYPE_RH, 27),
                             };
 
 3 using the constructor with String
 
-    payload meinpayload[] = {
+    BkuPayload meinpayload[] = {
                             {TYPE_TEMP, -15.5},
                             {TYPE_RH, 27},
                             };
