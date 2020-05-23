@@ -79,9 +79,9 @@ TYPE_EXT_TEMP2      = 0x19;  //External temp 2      2 bytes;    1 decimal place;
 TYPE_EXT_DIGITAL2   = 0x1A;  //Digital input 2      1 bytes;    0 decimal place;    value 1 or 0 
 TYPE_EXT_ANALOG_UV  = 0x1B;  //Load cell analog uV  4 bytes;    0 decimal place;    signed int (uV)
 TYPE_DEBUG          = 0x3D;  //debug                4 bytes;    0 decimal place;    debug
-
+```
 own extensions
-
+```
 TYPE_TEMP32		    = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
 TYPE_RH32           = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
 TYPE_GAS_KOHMS      = 0x1E;  //Gas qualität         4 Byte;     0 decimal place;    in kOhm
