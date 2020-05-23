@@ -253,7 +253,7 @@ function bintodec(TYPE_ID, num) {
     return num;
 }
 
-function DecodeElsysPayload(data){
+function DecodeBkuPayload(data){
     var obj = new Object();
     for(i=0;i<data.length;i++){
 
@@ -313,5 +313,5 @@ function DecodeElsysPayload(data){
 }
 
 function Decoder(bytes, port) {
-    return DecodeElsysPayload(bytes);
+    return DecodeBkuPayload(bytes);
 }
