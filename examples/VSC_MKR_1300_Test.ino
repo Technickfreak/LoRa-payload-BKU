@@ -1,3 +1,4 @@
+#include <Zanshin_BME680.h>
 #include <LoRa-payload-BKU.h>
 
 //use your secrets.h file or enter appEui & appKey below

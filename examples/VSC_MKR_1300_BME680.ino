@@ -1,9 +1,5 @@
 #include <Zanshin_BME680.h>
-//Eine Instanz des Sensors erstellen
-BME680_Class BME680;
-
-//#include "LoRa_payload_BKU.h"
-#include "D:\Schule\VS-Cdode\VSC MKR 1300\LoRa_mkr_wan_Lib\LoRa_payload_BKU.h"
+#include <LoRa-payload-BKU.h>
 
 //use your secrets.h file or enter appEui & appKey below
 #include <c:\secrets\secrets.h>
