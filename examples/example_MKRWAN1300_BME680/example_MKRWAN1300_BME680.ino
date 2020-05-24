@@ -1,6 +1,9 @@
 #include <Zanshin_BME680.h>
 #include <LoRa-payload-BKU.h>
 
+//Create an instance of the sensor
+BME680_Class BME680;
+
 //use your secrets.h file or enter appEui & appKey below
 #include <c:\secrets\secrets.h>
 String appEui = xxxxxxxxxxxxxxxx;
@@ -79,27 +82,27 @@ void loop()
     if (MSG[0] = 0){Serial.println("No downlink message received at this time.");} 
     BkuPrintMSG(MSG);
 
-    delay(22000);
+    //You may stick to the fair use policy max 30 sec airtime per day per node
+    //If you run this scetch 24/7 please set delay to 300000 or higher
+    //Bitte beachte die maximale Sendezeit von 30 Sekunden pro Tag und Gerät
+    //Bei rund um die Uhr Betrieb delay bitte mindestens auf 300000 setzen
 
+    delay(22000);
+    //delay(300000);
 }
 
 
 void printMesswerte()
 {
-    //Serial.print("\t");
-    Serial.print(temperature); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
-    Serial.print("\t\tGrad");
+    Serial.print(temperature);
+    Serial.print(" Grad\t\t");
 
-    //Serial.print("\t");
-    Serial.print(humidity); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
-    Serial.print("\t\tProzent");
+    Serial.print(humidity);
+    Serial.print(" Prozent\t\t");
 
-    //Serial.print("\t");
-    Serial.print(pressure); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
-    Serial.print("\t\tPascals");
+    Serial.print(pressure);
+    Serial.print(" Pascals\t\t");
 
-    //Serial.print("\t");
-    Serial.print(gas); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
-    Serial.print("\t\tAir Quality");
-    Serial.println("");
+    Serial.print(gas);
+    Serial.println(" Air Quality");
 }
