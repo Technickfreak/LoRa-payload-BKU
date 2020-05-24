@@ -15,8 +15,8 @@ var TYPE_CO2            = 0x06;  //Co2                  2 bytes;    0 decimal pl
 var TYPE_VDD            = 0x07;  //VDD                  2 byte;     0 decimal place;    0-65535mV
 var TYPE_ANALOG1        = 0x08;  //Analog input 1       2 byte;     0 decimal place;    0-65535mV
 var TYPE_GPS            = 0x09;  //GPS                  6 byte;     0 decimal place;                                        3 bytes lat 3 bytes long binary
-var TYPE_PULSE1         = 0x0A;  //Pulse input 2        2 bytes;    0 decimal place;                                        relative pulse count
-var TYPE_PULSE1_ABS     = 0x0B;  //Pulse 2 absolute     4 bytes;    0 decimal place;    no 0->0xFFFFFFFF
+var TYPE_PULSE1         = 0x0A;  //Pulse input 1        2 bytes;    0 decimal place;                                        relative pulse count
+var TYPE_PULSE1_ABS     = 0x0B;  //Pulse 1 absolute     4 bytes;    0 decimal place;    no 0->0xFFFFFFFF
 var TYPE_EXT_TEMP1      = 0x0C;  //External temp        2 bytes;    1 decimal place;    -3276.5C-->3276.5°C;
 var TYPE_EXT_DIGITAL    = 0x0D;  //Digital input        1 bytes;    0 decimal place;                                        value 1 or 0
 var TYPE_EXT_DISTANCE   = 0x0E;  //Distance sensor      2 bytes;    0 decimal place;                                        distance in mm
@@ -51,68 +51,68 @@ function TYPE_Name_relation(TYPE_ID) {
         case TYPE_ACC:
             return ["Acceleration","x","y","z"];
         case TYPE_LIGHT:
-            return 2;
+            return "Light";
         case TYPE_MOTION:
-            return 1;
+            return "No of motion";
         case TYPE_CO2:
-            return 2;
+            return "Co2";
         case TYPE_VDD:
-            return 2;
+            return "VDD";
         case TYPE_ANALOG1:
-            return 2;
+            return "Analog input 1";
         case TYPE_GPS:
             return ["GPS","lat","long"];
         case TYPE_PULSE1:
-            return 2;
+            return "Pulse input 1";
         case TYPE_PULSE1_ABS:
-            return 4;
+            return "Pulse 1 absolute";
         case TYPE_EXT_TEMP1:
-            return 2;
+            return "External temp";
         case TYPE_EXT_DIGITAL:
-            return 1;
+            return "Digital input";
         case TYPE_EXT_DISTANCE:
-            return 2;
+            return "Distance sensor";
         case TYPE_ACC_MOTION:
-            return 1;
+            return "Acc motion";
         case TYPE_IR_TEMP:
             return ["IR temperature","irInternalTemperature","irExternalTemperature"];
         case TYPE_OCCUPANCY:
-            return 1;
+            return "Body occupancy";
         case TYPE_WATERLEAK:
-            return 1;
+            return "Water leak";
         case TYPE_GRIDEYE:
             var grideye = ["grideye","ref"];
             for (grideyeN_i = 0; grideyeN_i < 64; grideyeN_i++) {grideye[grideyeN_i+2] = "grideye["+grideyeN_i+"]";}
             return "grideye Error: nicht inplementiert";
         case TYPE_PRESSURE:
-            return 4;
+            return "External Pressure";
         case TYPE_SOUND:
             return ["Sound","soundPeak","soundAvg"];
         case TYPE_PULSE2:
-            return 2;
+            return "Pulse input 2";
         case TYPE_PULSE2_ABS:
-            return 4;
+            return "Pulse 2 absolute";
         case TYPE_ANALOG2:
-            return 2;
+            return "Analog input 2";
         case TYPE_EXT_TEMP2:
-            return 2;
+            return "External temp 2";
         case TYPE_EXT_DIGITAL2:
-            return 1;
+            return "Digital input 2";
         case TYPE_EXT_ANALOG_UV:
-            return 4;
+            return "Load cell analog uV";
         case TYPE_DEBUG:
-            return 4;
+            return "debug";
 
 
 
         case TYPE_TEMP32:
-            return 4;    
+            return "temperature";    
         case TYPE_RH32:
-            return 4; 
+            return "Humidity"; 
         case TYPE_GAS_KOHMS:
-            return 4;    
+            return "Gas qualität";    
         case TYPE_sign_of_life:
-            return 0; 
+            return "I_am_alive"; 
         
 
         default:
