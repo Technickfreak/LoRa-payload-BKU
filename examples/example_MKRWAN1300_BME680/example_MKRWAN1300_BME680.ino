@@ -1,5 +1,5 @@
 #include <Zanshin_BME680.h>
-#include <LoRa-payload-BKU.h>
+#include <LoRa_payload_BKU.h>
 
 //Create an instance of the sensor
 BME680_Class BME680;
@@ -94,6 +94,7 @@ void loop()
 
 void printMesswerte()
 {
+<<<<<<< HEAD
     Serial.print(temperature);
     Serial.print(" Grad\t\t");
 
@@ -106,3 +107,22 @@ void printMesswerte()
     Serial.print(gas);
     Serial.println(" Air Quality");
 }
+=======
+    //Serial.print("\t");
+    Serial.print(temperature); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
+    Serial.print("\t\tGrad");
+
+    //Serial.print("\t");
+    Serial.print(humidity); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
+    Serial.print("\t\tProzent");
+
+    //Serial.print("\t");
+    Serial.print(pressure); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
+    Serial.print("\t\tPascals");
+
+    //Serial.print("\t");
+    Serial.print(gas); //-1 damit Messung 1 bis 15 Schubladen 0 bis 14 ergeben
+    Serial.print("\t\tAir Quality");
+    Serial.println("");
+}
+>>>>>>> f8ea605f9fd8b05f7bae1c56b2accd3c6080f46f
