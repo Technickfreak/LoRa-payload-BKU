@@ -1,8 +1,7 @@
-#include <Zanshin_BME680.h>
 #include <LoRa_payload_BKU.h>
 
 //use your secrets.h file or enter appEui & appKey below
-//#include <c:\secrets\secrets.h>
+#include <c:\secrets\secrets.h>
 String appEui = xxxxxxxxxxxxxxxx;
 String appKey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
 
@@ -48,6 +47,11 @@ void loop()
     if (MSG[0] = 0){Serial.println("No downlink message received at this time.");} 
     BkuPrintMSG(MSG);
 
+    //You may stick to the fair use policy max 30 sec airtime per day per node
+    //If you run this scetch 24/7 please set delay to 300000 or higher
+    //Bitte beachte die maximale Sendezeit von 30 Sekunden pro Tag und Gerät
+    //Bei rund um die Uhr Betrieb delay bitte mindestens auf 300000 setzen
+    
     delay(22000);
 
 }
