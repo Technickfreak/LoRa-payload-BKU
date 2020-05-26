@@ -1,5 +1,4 @@
-//#include <LoRa_payload_BKU.h>
-#include <C:\Users\Schule\OneDrive - Berufskolleg Uerdingen\Documents\GitHub\LoRa-payload-BKU\src\LoRa_payload_BKU.h>
+#include <LoRa_payload_BKU.h>
 
 using namespace Bku;
 //use your secrets.h file or enter appEui & appKey below
