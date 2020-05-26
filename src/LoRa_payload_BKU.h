@@ -42,7 +42,7 @@ namespace Bku
 
     } // namespace debugStatusLoraBku
 
-    bool SetupLorawanLoraBku(String appEui_, String appKey_, _lora_band frequency_ = EU868)
+    bool SetupLoraBku(String appEui_, String appKey_, _lora_band frequency_ = EU868)
     {
         debugStatusLoraBku::appEui = appEui_;
         debugStatusLoraBku::appKey = appKey_;

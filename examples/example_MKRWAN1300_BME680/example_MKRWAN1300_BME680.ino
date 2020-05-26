@@ -15,7 +15,7 @@ _lora_band frequency = EU868;
 void setup()
 {
     Serial.begin(115200);
-    BkuSetupLorawan(appEui, appKey, frequency);
+    SetupLoraBku(appEui, appKey, frequency);
     
     Serial.print("Your device EUI is: ");
     Serial.println(modem.deviceEUI());
