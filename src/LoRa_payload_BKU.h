@@ -92,7 +92,7 @@ namespace Bku
     }
 
     void PrintMSGLoraBku(uint8_t *MSG, size_t size)
-    {o
+    {
         for (size_t i = 0; i < size; i++)
         {
             if (MSG[i] < 0x10)
