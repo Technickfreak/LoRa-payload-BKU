@@ -3,24 +3,29 @@
 #ifndef _LoRa_payload_BKU_h
 #define _LoRa_payload_BKU_h
 
-	#include "arduino.h"
-    
-	#include <MKRWAN.h>
-	LoRaModem modem;
 
-    #include "construct_TYPE.h"
 
-    namespace debugStatusLoraBku {
+#include "arduino.h"
 
-            String appEui;
-            String appKey;
-            _lora_band frequency = EU868;
+#include <MKRWAN.h>
+    LoRaModem modem;
 
-        bool modemBeginState = false;					//debug for LoRa-Modem-Start
-        bool OTAAState = false;							//debug state for OTAA (Over-The-Air-Authentication)
-        bool loopCheck = false;							//debug state for Loop
+#include "construct_TYPE.h"
+namespace Bku
+{
 
-        void connectToTTN()		//Method to connect to TTN
+    namespace debugStatusLoraBku
+    {
+
+        String appEui;
+        String appKey;
+        _lora_band frequency = EU868;
+
+        bool modemBeginState = false; //debug for LoRa-Modem-Start
+        bool OTAAState = false;       //debug state for OTAA (Over-The-Air-Authentication)
+        bool loopCheck = false;       //debug state for Loop
+
+        void connectToTTN() //Method to connect to TTN
         {
             //start LoRa modem in specified band
             modemBeginState = modem.begin(frequency);
@@ -30,42 +35,44 @@
             OTAAState = modem.joinOTAA(appEui, appKey);
         }
 
-        bool connectionOK()		//Method to connect to TTN
+        bool connectionOK() //Method to connect to TTN
         {
             return (modemBeginState && OTAAState);
         }
 
-    }
+    } // namespace debugStatusLoraBku
 
-    bool BkuSetupLorawan(String appEui_, String appKey_, _lora_band frequency_ = EU868){
+    bool SetupLorawanLoraBku(String appEui_, String appKey_, _lora_band frequency_ = EU868)
+    {
         debugStatusLoraBku::appEui = appEui_;
         debugStatusLoraBku::appKey = appKey_;
         debugStatusLoraBku::frequency = frequency_;
 
-        if (!modem.begin(debugStatusLoraBku::frequency)) {
+        if (!modem.begin(debugStatusLoraBku::frequency))
+        {
             Serial.println("Failed to start module");
             return false;
         };
-        
+
         int connected = modem.joinOTAA(debugStatusLoraBku::appEui, debugStatusLoraBku::appKey);
-        if (!connected) {
+        if (!connected)
+        {
             Serial.println("Something went wrong; are you indoor? Move near a window and retry");
             return false;
         }
         return true;
     }
 
-
     //bool sendData(uint8_t MSG)		//Method to check LoRa state and send data to TTN
-    bool BkuSendData(uint8_t *MSG, size_t size = 1)
+    bool SendDataLoraBku(uint8_t *MSG, size_t size = 1)
     {
         bool msgSend = false;
-        if (!debugStatusLoraBku::connectionOK())	//Check if LoRa-Modem start & OTAA was correct last time, if not, try again
+        if (!debugStatusLoraBku::connectionOK()) //Check if LoRa-Modem start & OTAA was correct last time, if not, try again
         {
             debugStatusLoraBku::connectToTTN();
         }
 
-        if (debugStatusLoraBku::connectionOK())	    //if connection to TTN was successful at least once, send message
+        if (debugStatusLoraBku::connectionOK()) //if connection to TTN was successful at least once, send message
         {
             //payload testpayload;
             modem.beginPacket();
@@ -73,30 +80,32 @@
             //Serial.println(testpayload.getPayload()[0]+" "+testpayload.getPayload()[1]+" "+testpayload.getPayload()[2]);
             //Serial.println(MSG);
             //modem.write(testpayload.getPayload(), testpayload.getLength());
-            msgSend = modem.endPacket(true);					//endPacket finishes all messages and sends it to TTN
+            msgSend = modem.endPacket(true); //endPacket finishes all messages and sends it to TTN
         }
         return (msgSend); //folse: "Error sending message :("
     }
-    
-    bool BkuSendPayload(BkuPayload *mypayload)
+
+    bool SendPayloadLoraBku(PayloadLoraBku *mypayload)
     {
         //printData(payloadconverter(mypayload), payloadlength(mypayload));
-        return BkuSendData(BkuPayloadconverter(mypayload), BkuPayloadlength(mypayload));
-        
+        return SendDataLoraBku(PayloadconverterLoraBku(mypayload), PayloadlengthLoraBku(mypayload));
     }
 
-    void BkuPrintMSG(uint8_t *MSG, size_t size)
-    {	
+    void PrintMSGLoraBku(uint8_t *MSG, size_t size)
+    {o
         for (size_t i = 0; i < size; i++)
         {
-            if (MSG[i]<0x10) {Serial.print("0");}
-            Serial.print(MSG[i],HEX);
+            if (MSG[i] < 0x10)
+            {
+                Serial.print("0");
+            }
+            Serial.print(MSG[i], HEX);
             Serial.print(" ");
         }
         Serial.println("");
     }
 
-    void BkuPrintMSG(uint8_t *MSG)
+    void PrintMSGLoraBku(uint8_t *MSG)
     {
         if (MSG[0] > 0)
         {
@@ -104,31 +113,38 @@
             Serial.println(MSG[0]);
             for (int i = 1; i <= MSG[0]; i++)
             {
-                if (MSG[i]<0x10) {Serial.print("0");}
-                Serial.print(MSG[i],HEX);
+                if (MSG[i] < 0x10)
+                {
+                    Serial.print("0");
+                }
+                Serial.print(MSG[i], HEX);
                 Serial.print(" ");
             }
             Serial.println("");
         }
     }
 
-    uint8_t *BkuReceiveData()
+    uint8_t *ReceiveDataLoraBku()
     {
         static uint8_t MSG[64];
-        if (!modem.available()) {
+        if (!modem.available())
+        {
             //Serial.println("No downlink message received at this time.");
             MSG[0] = 0;
             return MSG;
-        }else{
+        }
+        else
+        {
             int i = 1;
-            while (modem.available()) {
+            while (modem.available())
+            {
                 MSG[i++] = (uint8_t)modem.read();
             }
-            MSG[0] = i-1;         //Array Position 0 ist für die lange des Array
+            MSG[0] = i - 1; //Array Position 0 ist für die lange des Array
             return MSG;
         }
     }
 
-
+} // namespace PayloadLoraBku
 
 #endif
