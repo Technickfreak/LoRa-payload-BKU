@@ -10,7 +10,9 @@
 #include <MKRWAN.h>
     LoRaModem modem;
 
-#include "construct_TYPE.h"
+//#include "construct_TYPE.h"
+#include <C:\Users\Schule\OneDrive - Berufskolleg Uerdingen\Documents\GitHub\LoRa-payload-BKU\src\construct_TYPE.h>
+
 namespace Bku
 {
 

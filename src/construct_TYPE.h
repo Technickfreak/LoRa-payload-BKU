@@ -248,10 +248,10 @@ namespace Bku
         return length;
     }
 
-    uint8_t *PayloadconverterLoraBku(BkuPayload *mypayload)
+    uint8_t* PayloadconverterLoraBku(PayloadLoraBku *mypayload)
     {
-        // uint8_t *buildPayload = nullptr;
-        // delete[] buildPayload;
+        //uint8_t *buildPayload = nullptr;
+        //delete[] buildPayload;
         int uebertrag = PayloadlengthLoraBku(mypayload);
 
         uint8_t *buildPayload = new uint8_t[uebertrag];
