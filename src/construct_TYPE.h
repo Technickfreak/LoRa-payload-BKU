@@ -8,7 +8,7 @@ namespace Bku
     {
         //   \/  ELSYS kopatiebel \/
         TYPE_TEMP = 0x01,          //temperature;         2 bytes;    1 decimal place;    -3276.8°C --> 3276.7°C;
-        TYPE_RH = 0x02,            //Humidity;            1 byte;     0 decimal place;    0-100%;
+        TYPE_HUMIDITY = 0x02,      //Humidity;            1 byte;     0 decimal place;    0-100%;
         TYPE_ACC = 0x03,           //acceleration;        3 bytes;    0 decimal place;    X,Y,Z -128 --> 127 +/-63=1G;
         TYPE_LIGHT = 0x04,         //Light;               2 bytes;    0 decimal place;    0-->65535 Lux;
         TYPE_MOTION = 0x05,        //No of motion         1 byte;     0 decimal place;    0-255
@@ -38,7 +38,7 @@ namespace Bku
         //   /\  ELSES kopatiebel /\ 
 
         TYPE_TEMP32 = 0x1C,       //temperature;         4 bytes;    2 decimal place;
-        TYPE_RH32 = 0x1D,         //Humidity;            4 byte;     2 decimal place;    0-100%;
+        TYPE_HUMIDITY32 = 0x1D,         //Humidity;            4 byte;     2 decimal place;    0-100%;
         TYPE_GAS_KOHMS = 0x1E,    //Gas qualität         4 Byte;     0 decimal place;    in KOhm
         TYPE_sign_of_life = 0x1F, //minimale übertragung;0 bytes;    0 decimal place;    I_am_alive=true;
 
@@ -54,7 +54,7 @@ namespace Bku
             {
             case TYPE_TEMP:
                 return 2;
-            case TYPE_RH:
+            case TYPE_HUMIDITY:
                 return 1;
             case TYPE_ACC:
                 return 3;
@@ -111,7 +111,7 @@ namespace Bku
 
             case TYPE_TEMP32:
                 return 4;
-            case TYPE_RH32:
+            case TYPE_HUMIDITY32:
                 return 4;
             case TYPE_GAS_KOHMS:
                 return 4;
@@ -130,7 +130,7 @@ namespace Bku
             {
             case TYPE_TEMP:
                 return 1;
-            case TYPE_RH:
+            case TYPE_HUMIDITY:
                 return 0;
             case TYPE_ACC:
                 return 0;
@@ -187,7 +187,7 @@ namespace Bku
 
             case TYPE_TEMP32:
                 return 2;
-            case TYPE_RH32:
+            case TYPE_HUMIDITY32:
                 return 2;
             case TYPE_GAS_KOHMS:
                 return 0;

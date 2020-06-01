@@ -49,7 +49,7 @@ void loop()
     BkuPayload testpayload[4];
     testpayload[0].TYPE = TYPE_TEMP;
     testpayload[0].wert = (temperature);
-    testpayload[1].TYPE = TYPE_RH;
+    testpayload[1].TYPE = TYPE_HUMIDITY;
     testpayload[1].wert = (humidity);
     testpayload[2].TYPE = TYPE_PRESSURE;
     testpayload[2].wert = (pressure);
@@ -61,7 +61,7 @@ void loop()
     /*
     BkuPayload testpayload2[] = {
                             BkuPayload(TYPE_TEMP, temperature),
-                            BkuPayload(TYPE_RH, humidity),
+                            BkuPayload(TYPE_HUMIDITY, humidity),
                             BkuPayload(TYPE_PRESSURE, pressure),
                             BkuPayload(TYPE_GAS_KOHMS, gas),
                             };
@@ -69,7 +69,7 @@ void loop()
     /*
     BkuPayload testpayload3[] = {
                             {TYPE_TEMP, temperature},
-                            {TYPE_RH, humidity},
+                            {TYPE_HUMIDITY, humidity},
                             {TYPE_PRESSURE, pressure},
                             {TYPE_GAS_KOHMS, gas},
                             };

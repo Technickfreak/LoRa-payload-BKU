@@ -8,7 +8,7 @@
 #include "arduino.h"
 
 #include <MKRWAN.h>
-    LoRaModem modem;
+LoRaModem modem;
 
 #include "construct_TYPE.h"
 

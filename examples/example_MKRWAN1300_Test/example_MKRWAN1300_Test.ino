@@ -29,13 +29,13 @@ void loop()
     
     /*
     PayloadLoraBku testpayload2[] = {
-                            PayloadLoraBku(TYPE_RH, 66),
+                            PayloadLoraBku(TYPE_HUMIDITY, 66),
                             PayloadLoraBku(TYPE_TEMP, 20.6),
                             };
     */
     /*
     PayloadLoraBku testpayload3[] = {
-                            {TYPE_RH, 66},
+                            {TYPE_HUMIDITY, 66},
                             {TYPE_TEMP, 20.6},
                             };
     */
