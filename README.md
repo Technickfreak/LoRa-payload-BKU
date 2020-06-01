@@ -21,8 +21,6 @@ Alle drei Möglichkeiten führen zum selben Ergebnis.
 # Snippets
 1 predefined payload
 
-<<<<<<< HEAD
-### Schritt2.
 Befülle dein Payload Objekt mit deinen Sensorwerten dazu übergibst du 
 Erste den gewünschten Datentypen aus der Liste unten, dann deinen Messwert.
 Für diesen Vorgang stehten dir 3 Möglichkeiten/Vorgehensweisen zur Verfügung.
@@ -53,7 +51,7 @@ BkuPayload meinpayload[] = {
 ELSYS.se compatible
 ``` 
 TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
-TYPE_HUMIDITY             = 0x02;  //Humidity;            1 byte;     0 decimal place;    0->100%;
+TYPE_HUMIDITY       = 0x02;  //Humidity;            1 byte;     0 decimal place;    0->100%;
 TYPE_ACC            = 0x03;  //acceleration;        3 bytes;    0 decimal place;    X,Y,Z -128->127 +/-63=1G;
 TYPE_LIGHT          = 0x04;  //Light;               2 bytes;    0 decimal place;    0->65535 Lux;
 TYPE_MOTION         = 0x05;  //No of motion         1 byte;     0 decimal place;    0->255;
@@ -84,7 +82,7 @@ TYPE_DEBUG          = 0x3D;  //debug                4 bytes;    0 decimal place;
 own extensions
 ```
 TYPE_TEMP32		    = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
-TYPE_HUMIDITY32           = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
+TYPE_HUMIDITY32     = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
 TYPE_GAS_KOHMS      = 0x1E;  //Gas qualität         4 Byte;     0 decimal place;    in kOhm
 TYPE_sign_of_life   = 0x1F;  //minimale übertragung;0 bytes;    0 decimal place;    I_am_alive=true;
 ```
