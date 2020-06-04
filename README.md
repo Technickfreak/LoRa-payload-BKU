@@ -20,7 +20,7 @@ Alle drei Möglichkeiten führen zum selben Ergebnis.
 
 # Snippets
 
-Nr1 (Zeilenweise Befüllung)
+1 line by line
 ```
 BkuPayload testpayload[2];
 meinpayload[0].TYPE = TYPE_TEMP;
@@ -28,14 +28,14 @@ meinpayload[0].wert = (-15.5);
 meinpayload[1].TYPE = TYPE_HUMIDITY;
 meinpayload[1].wert = (27);
 ```
-2 using the constructor
+2 using the constructor type1
 ```
 BkuPayload meinpayload[] = {
                         payload(TYPE_TEMP, -15.5),
                         payload(TYPE_HUMIDITY, 27),
                         };
 ```
-3 using the constructor with String
+3 using the constructor type2
 ```
 BkuPayload meinpayload[] = {
                         {TYPE_TEMP, -15.5},
