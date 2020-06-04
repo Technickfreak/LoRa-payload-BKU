@@ -1,10 +1,3 @@
-/*
-  ELSYS simple payload decoder. 
-  Use it as it is or remove the bugs :)
-  www.elsys.se
-  peter@elsys.se
-*/
-
 //   \/  ELSYS kopatiebel \/
 var TYPE_TEMP           = 0x01;  //temperature;             2 bytes;    1 decimal place;    -3276.8°C --> 3276.7°C;
 var TYPE_HUMIDITY       = 0x02;  //Humidity;                1 byte;     0 decimal place;    0-100%;

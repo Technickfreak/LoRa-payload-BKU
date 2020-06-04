@@ -6,9 +6,6 @@ using namespace Bku;
 String appEui = xxxxxxxxxxxxxxxx;
 String appKey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
 
-//set your frequenze plan values are: (EU868,AS923,AU915,KR920,IN865,US915,US915_HYBRID)
-_lora_band frequency = EU868;
-
 void setup()
 {
     Serial.begin(115200);
@@ -26,21 +23,19 @@ void loop()
     testpayload[0].wert = (-15.5);
     testpayload[1].TYPE = TYPE_RH;
     testpayload[1].wert = (27);
-    
+	
     /*
     PayloadLoraBku testpayload2[] = {
                             PayloadLoraBku(TYPE_HUMIDITY, 66),
                             PayloadLoraBku(TYPE_TEMP, 20.6),
                             };
-    */
-    /*
+
     PayloadLoraBku testpayload3[] = {
                             {TYPE_HUMIDITY, 66},
                             {TYPE_TEMP, 20.6},
                             };
     */
-
-
+	
     SendPayloadLoraBku(testpayload);
     delay(1000);    
     uint8_t *MSG = ReceiveDataLoraBku();
@@ -53,5 +48,4 @@ void loop()
     //Bei rund um die Uhr Betrieb delay bitte mindestens auf 300000 setzen
     
     delay(22000);
-
 }

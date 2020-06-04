@@ -4,22 +4,22 @@
 # Class and struct
 #######################################
 
-payload             KEYWORD1
+PayloadLoraBku      KEYWORD1
 
 
 #######################################
 # Methods and Functions 
 #######################################	
 
-setupLorawan	    KEYWORD2
-sendData	        KEYWORD2
-sendPayload	        KEYWORD2
-printMSG	        KEYWORD2
-receiveData	        KEYWORD2
+SetupLoraBku	            KEYWORD2
+SendDataLoraBku 	        KEYWORD2
+SendPayloadLoraBku	        KEYWORD2
+PrintMSGLoraBku 	        KEYWORD2
+ReceiveDataLoraBku	        KEYWORD2
 
-payloadconverter	KEYWORD2
-payloadlength	    KEYWORD2
-printPayload	    KEYWORD2
+PayloadconverterLoraBku     KEYWORD2
+PayloadlengthLoraBku	    KEYWORD2
+PrintPayloadLoraBku 	    KEYWORD2
 
 
 
@@ -28,7 +28,7 @@ printPayload	    KEYWORD2
 #######################################
 
 TYPE_TEMP	        LITERAL1
-TYPE_RH	            LITERAL1
+TYPE_HUMIDITY       LITERAL1
 TYPE_ACC	        LITERAL1
 TYPE_LIGHT	        LITERAL1
 TYPE_MOTION	        LITERAL1
@@ -58,6 +58,6 @@ TYPE_DEBUG	        LITERAL1
 
 
 TYPE_TEMP32	        LITERAL1
-TYPE_RH32	        LITERAL1
+TYPE_HUMIDITY32	    LITERAL1
 TYPE_GAS_KOHMS	    LITERAL1
 TYPE_sign_of_life	LITERAL1
