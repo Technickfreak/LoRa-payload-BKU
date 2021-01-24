@@ -1,0 +1,30 @@
+TYPE_Bezeichnung;TYPE_ID;Übertragungs einheit;bytes;decimal place;Übertragungs min -> Übertragungs max
+
+TYPE_TEMP;0x01;temperature;2;1;-3276.8°C->3276.7°C
+TYPE_HUMIDITY;0x02;Humidity;1;0;0%->100%
+TYPE_ACC;0x03;acceleration;3;0;X,Y,Z -128->127 +/-63 1G
+TYPE_LIGHT;0x04;Light;2;0;0->65535 Lux
+TYPE_MOTION;0x05;No of motion;1;0;0->255
+TYPE_CO2;0x06;Co2;2;0;0->65535 ppm
+TYPE_VDD;0x07;VDD;2;0;0->65535mV
+TYPE_ANALOG1;0x08;Analog input 1;2;0;0->65535mV
+TYPE_GPS;0x09;GPS;6;0;3 bytes lat 3 bytes long binary
+TYPE_PULSE1;0x0A;Pulse input 2;2;0;relative pulse count
+TYPE_PULSE1_ABS;0x0B;Pulse 2 absolute;4;0;no 0->0xFFFFFFFF
+TYPE_EXT_TEMP1;0x0C;External temp;2;1;-3276.5C->3276.5°C
+TYPE_EXT_DIGITAL;0x0D;Digital input;1;0;value 1 or 0
+TYPE_EXT_DISTANCE;0x0E;Distance sensor;2;0;distance in mm
+TYPE_ACC_MOTION;0x0F;Acc motion;1;0;number of vibration/motion
+TYPE_IR_TEMP;0x10;IR temperature;4;1;-3276.5C->3276.5°C // 2bytes internal temp 2bytes external temp
+TYPE_OCCUPANCY;0x11;Body occupancy;1;0;data
+TYPE_WATERLEAK;0x12;Water leak;1;0;0-255   data
+TYPE_GRIDEYE;0x13;temperature;65;1;nicht inplementiert
+TYPE_PRESSURE;0x14;External Pressure;4;3;pressure data (hPa)
+TYPE_SOUND;0x15;Sound;2;0;sound data (peak/avg)
+TYPE_PULSE2;0x16;Pulse input 2;2;0;0->0xFFFF
+TYPE_PULSE2_ABS;0x17;Pulse 2 absolute;4;0;no 0->0xFFFFFFFF
+TYPE_ANALOG2;0x18;Analog input 2;2;0;voltage in mV
+TYPE_EXT_TEMP2;0x19;External temp 2;2;1;-3276.5C->3276.5°C
+TYPE_EXT_DIGITAL2;0x1A;Digital input 2;1;0;value 1 or 0 
+TYPE_EXT_ANALOG_UV;0x1B;Load cell analog uV;4;0;signed int (uV)
+TYPE_DEBUG;0x3D;debug;4;0;debug
