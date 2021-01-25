@@ -7,7 +7,7 @@ namespace Bku
     typedef enum
     {
         //TYPE_TEMP = 0x01,
-        //Python-Marker#\t\t{1} = {2},
+        //Python-Marker#\t\t{1} = {2},\t\t//{3};\t\t{8}
         
 
     } TYPE_;
@@ -33,7 +33,7 @@ namespace Bku
         {
             switch (type)
             {
-            //Python-Marker#\t\t\tcase {1}: \n\t\t\t\treturn {5};
+            //Python-Marker#\t\t\tcase {1}: \n\t\t\t\treturn {6};
             
 
             default:
