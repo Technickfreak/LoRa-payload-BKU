@@ -17,17 +17,22 @@ import csv
 import sys,os
 
 scriptPath, _ = os.path.split(os.path.abspath(__file__))
-source_code_folder = os.path.join(scriptPath, "source_code")
+source_folder_name = "source_code"
+source_code_folder = os.path.join(scriptPath, source_folder_name)
 source_table = os.path.join(scriptPath, "source_table.csv")
-target_code_folder = os.path.join(scriptPath,"..")
-print(scriptPath)
-print(target_code_folder)
+#target_code_folder = os.path.join(scriptPath,"..")
+temp = scriptPath.split("\\")
+source_folders_names = os.path.join(temp[len(temp)-1],source_folder_name)
+print(source_table)
+
+#print(source_table.replace(source_main_folder_name+"\\", ""))
 
 for path, subdirs, files in os.walk(source_code_folder):
     for name in files:
-        print(os.path.join(path, name))
-        target_file = open("demofile2.txt", "a")
-        source_file = open(os.path.join(path, name), "r")
+        source_path = os.path.join(path, name)
+        target_file = open(source_path.replace(source_folders_names+"\\", ""), "a")
+        print(source_path)
+        source_file = open(source_path, "r")
         for line in source_file:
             target_file.write(line)
             if line.find("Python-Marker") != -1:
