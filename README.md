@@ -44,14 +44,14 @@ BkuPayload meinpayload[] = {
 ```
 ## supported datatypes
 ELSYS.se compatible
-``` 
+ 
 TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
 |activated|TYPE_Bezeichnung|TYPE_ID|Übertragungs einheit|bytes|decimal place|Übertragungs min -> Übertragungs max|
 | --- | --- | --- | --- | --- | --- | --- |
 | {0} | {1} | {2} | {3} | {4} | {5} | {6} |
 <!--Python-Marker#| {0} | {1} | {2} | {3} | {4} | {5} | {6} | -->
 | true | TYPE_TEMP | 0x01 | temperature | 2 | 1 | -3276.8°C->3276.7°C |
-```
+
 
 
 ## extend List
