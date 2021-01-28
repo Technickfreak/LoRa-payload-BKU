@@ -44,12 +44,13 @@ BkuPayload meinpayload[] = {
 ```
 ## supported datatypes
 ELSYS.se compatible
-
+<!--
 TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;
 |activated|TYPE_Bezeichnung|TYPE_ID|Übertragungs einheit|bytes|decimal place|Übertragungs min -> Übertragungs max|
 | --- | --- | --- | --- | --- | --- | --- |
-| {0} | {1} | {2} | {3} | {4} | {5} | {6} |
+| {0} | {1} | {2} | {3} | {4} | {6} | {7} |-->
 | compile | TYPE_Bezeichnung | TYPE_ID | Übertragungs einheit | bytes | sub bytes | decimal place |
+| --- | --- | --- | --- | --- | --- | --- |
 | true | TYPE_TEMP | 0x01 | temperature | 2 | 2 | 1 |
 | false | TYPE_HUMIDITY | 0x02 | Humidity | 1 | 1 | 0 |
 | true | TYPE_ACC | 0x03 | ["Acceleration","x","y","z"] | 3 | [3,1,1,1] | 0 |
