@@ -29,7 +29,7 @@ for path, subdirs, files in os.walk(source_code_folder):
         target_file = open(target_path, "a")
         source_file = open(source_path, "r")
         for line in source_file:
-            target_file.write(line)
+            #target_file.write(line)
             if line.find("Python-Marker") != -1:
                 x = line.split("#")
 
@@ -44,6 +44,8 @@ for path, subdirs, files in os.walk(source_code_folder):
                         if row[0] == "true":
                             target_file.write(form.format(*row))
                             #target_file.write(line_form.format(*row))
+            else:
+                target_file.write(line)
         target_file.close()
 os.remove(source_table_temp)
                 

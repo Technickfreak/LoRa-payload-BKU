@@ -49,10 +49,8 @@ TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;
 |activated|TYPE_Bezeichnung|TYPE_ID|Übertragungs einheit|bytes|decimal place|Übertragungs min -> Übertragungs max|
 | --- | --- | --- | --- | --- | --- | --- |
 | {0} | {1} | {2} | {3} | {4} | {5} | {6} |
-| true | TYPE_TEMP | 0x01 | temperature | 2 | 2 | 1 | -->
-| true | TYPE_ACC | 0x03 | ["Acceleration","x","y","z"] | 3 | [3,1,1,1] | 0 | -->
-| true | TYPE_TEMP | 0x01 | temperature | 2 | 2 | 1 | -->
-| true | TYPE_ACC | 0x03 | ["Acceleration","x","y","z"] | 3 | [3,1,1,1] | 0 | -->
+<!--Python-Marker#| {0} | {1} | {2} | {3} | {4} | {5} | {6} | -->
+<!--Python-Marker#| {0} | {1} | {2} | {3} | {4} | {5} | {6} | -->
 
 ## extend List
 To add your own datatypes please refer to /src/construct_TYPE.h and /extras/Decoder.js
