@@ -26,13 +26,13 @@ namespace Bku
         bool OTAAState = false;       //debug state for OTAA (Over-The-Air-Authentication)
         bool loopCheck = false;       //debug state for Loop
 
-        void connectToTTN() //Method to connect to TTN
+        void connectToLoRaNetwork() //Method to connect to TTN or any other LoRa-Network via OTAA
         {
             //start LoRa modem in specified band
             modemBeginState = modem.begin(frequency);
             //debugStatusLoraBku::modemBeginState = modem.begin(testEU868);
 
-            //request Over-The-Air-Authentication from TTN-Network
+            //request Over-The-Air-Authentication from LoRa-Network
             OTAAState = modem.joinOTAA(appEui, appKey);
         }
 
@@ -70,7 +70,7 @@ namespace Bku
         bool msgSend = false;
         if (!debugStatusLoraBku::connectionOK()) //Check if LoRa-Modem start & OTAA was correct last time, if not, try again
         {
-            debugStatusLoraBku::connectToTTN();
+            debugStatusLoraBku::connectToLoRaNetwork();
         }
 
         if (debugStatusLoraBku::connectionOK()) //if connection to TTN was successful at least once, send message
