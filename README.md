@@ -22,7 +22,7 @@ Alle drei Möglichkeiten führen zum selben Ergebnis.
 
 1 line by line
 ```
-BkuPayload testpayload[2];
+Bku::PayloadLoraBku testpayload[2];
 meinpayload[0].TYPE = TYPE_TEMP;
 meinpayload[0].wert = (-15.5);
 meinpayload[1].TYPE = TYPE_HUMIDITY;
@@ -30,14 +30,14 @@ meinpayload[1].wert = (27);
 ```
 2 using the constructor type1
 ```
-BkuPayload meinpayload[] = {
+Bku::PayloadLoraBku meinpayload[] = {
                         payload(TYPE_TEMP, -15.5),
                         payload(TYPE_HUMIDITY, 27),
                         };
 ```
 3 using the constructor type2
 ```
-BkuPayload meinpayload[] = {
+Bku::PayloadLoraBku meinpayload[] = {
                         {TYPE_TEMP, -15.5},
                         {TYPE_HUMIDITY, 27},
                         };
@@ -76,7 +76,7 @@ TYPE_DEBUG          = 0x3D;  //debug                4 bytes;    0 decimal place;
 ```
 own extensions
 ```
-TYPE_TEMP32		    = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
+TYPE_TEMP32		      = 0x1C;  //temperature;         4 bytes;    2 decimal place;    -21474836.48°C->21474181.12°C;
 TYPE_HUMIDITY32     = 0x1D;  //Humidity;            4 byte;     2 decimal place;    0.00%->100.00%;
 TYPE_GAS_KOHMS      = 0x1E;  //Gas qualität         4 Byte;     0 decimal place;    in kOhm
 TYPE_sign_of_life   = 0x1F;  //minimale übertragung;0 bytes;    0 decimal place;    I_am_alive=true;
