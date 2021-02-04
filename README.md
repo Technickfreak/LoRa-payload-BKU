@@ -45,36 +45,36 @@ BkuPayload meinpayload[] = {
 ## supported datatypes
 ELSYS.se compatible
 <!--TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;-->
-| compile | TYPE_Bezeichnung | Übertragungs einheit | Übertragungs min -> Übertragungs max    | beschreibung |
+| compile | TYPE_Bezeichnung | TYPE_ID | Übertragungs min -> Übertragungs max    | beschreibung |
 | --- | --- | --- | --- | --- |
-| true | TYPE_TEMP | temperature | -3276.8°C->3276.7°C |  |
-| false | TYPE_HUMIDITY | Humidity | 0%->100% |  |
-| true | TYPE_ACC | ["Acceleration","x","y","z"] | X,Y,Z -128->127 +/-63 1G |  |
-| false | TYPE_LIGHT | Light | 0->65535 Lux |  |
-| false | TYPE_MOTION | No of motion | 0->255 |  |
-| false | TYPE_CO2 | Co2 | 0->65535 ppm |  |
-| false | TYPE_VDD | VDD | 0->65535 mV |  |
-| false | TYPE_ANALOG1 | Analog input 1 | 0->65535 mV |  |
-| false | TYPE_GPS | ["GPS","lat","long"] |  | 3 bytes lat 3 bytes long binary |
-| false | TYPE_PULSE1 | Pulse input 2 | 0->0xFFFF | relative pulse count |
-| false | TYPE_PULSE1_ABS | Pulse 2 absolute | no 0->0xFFFFFFFF |  |
-| false | TYPE_EXT_TEMP1 | External temp | -3276.5C->3276.5°C |  |
-| false | TYPE_EXT_DIGITAL | Digital input |  | value 1 or 0 |
-| false | TYPE_EXT_DISTANCE | Distance sensor |  | distance in mm |
-| false | TYPE_ACC_MOTION | Acc motion |  | number of vibration/motion |
-| false | TYPE_IR_TEMP | ["IR temperature","irInternalTemperature","irExternalTemperature"] | -3276.5C->3276.5°C  | 2bytes internal temp 2bytes external temp |
-| false | TYPE_OCCUPANCY | Body occupancy | data |  |
-| false | TYPE_WATERLEAK | Water leak | 0-255   data |  |
-| false | TYPE_GRIDEYE | grideye Error: nicht inplementiert |  | nicht inplementiert |
-| false | TYPE_PRESSURE | External Pressure |  | pressure data (hPa) |
-| false | TYPE_SOUND | ["Sound","soundPeak","soundAvg"] |  | sound data (peak/avg) |
-| false | TYPE_PULSE2 | Pulse input 2 | 0->0xFFFF |  |
-| false | TYPE_PULSE2_ABS | Pulse 2 absolute | no 0->0xFFFFFFFF |  |
-| false | TYPE_ANALOG2 | Analog input 2 | 0->65535 mV | voltage in mV |
-| false | TYPE_EXT_TEMP2 | External temp 2 | -3276.5C->3276.5°C |  |
-| false | TYPE_EXT_DIGITAL2 | Digital input 2 |  | value 1 or 0  |
-| false | TYPE_EXT_ANALOG_UV | Load cell analog uV |  | signed int (uV) |
-| false | TYPE_DEBUG | debug |  | debug |
+| true | TYPE_TEMP | 0x01 | -3276.8°C->3276.7°C |  |
+| false | TYPE_HUMIDITY | 0x02 | 0%->100% |  |
+| true | TYPE_ACC | 0x03 | X,Y,Z -128->127 +/-63 1G |  |
+| false | TYPE_LIGHT | 0x04 | 0->65535 Lux |  |
+| false | TYPE_MOTION | 0x05 | 0->255 |  |
+| false | TYPE_CO2 | 0x06 | 0->65535 ppm |  |
+| false | TYPE_VDD | 0x07 | 0->65535 mV |  |
+| false | TYPE_ANALOG1 | 0x08 | 0->65535 mV |  |
+| false | TYPE_GPS | 0x09 |  | 3 bytes lat 3 bytes long binary |
+| false | TYPE_PULSE1 | 0x0A | 0->0xFFFF | relative pulse count |
+| false | TYPE_PULSE1_ABS | 0x0B | no 0->0xFFFFFFFF |  |
+| false | TYPE_EXT_TEMP1 | 0x0C | -3276.5C->3276.5°C |  |
+| false | TYPE_EXT_DIGITAL | 0x0D |  | value 1 or 0 |
+| false | TYPE_EXT_DISTANCE | 0x0E |  | distance in mm |
+| false | TYPE_ACC_MOTION | 0x0F |  | number of vibration/motion |
+| false | TYPE_IR_TEMP | 0x10 | -3276.5C->3276.5°C  | 2bytes internal temp 2bytes external temp |
+| false | TYPE_OCCUPANCY | 0x11 | data |  |
+| false | TYPE_WATERLEAK | 0x12 | 0-255   data |  |
+| false | TYPE_GRIDEYE | 0x13 |  | nicht inplementiert |
+| false | TYPE_PRESSURE | 0x14 |  | pressure data (hPa) |
+| false | TYPE_SOUND | 0x15 |  | sound data (peak/avg) |
+| false | TYPE_PULSE2 | 0x16 | 0->0xFFFF |  |
+| false | TYPE_PULSE2_ABS | 0x17 | no 0->0xFFFFFFFF |  |
+| false | TYPE_ANALOG2 | 0x18 | 0->65535 mV | voltage in mV |
+| false | TYPE_EXT_TEMP2 | 0x19 | -3276.5C->3276.5°C |  |
+| false | TYPE_EXT_DIGITAL2 | 0x1A |  | value 1 or 0  |
+| false | TYPE_EXT_ANALOG_UV | 0x1B |  | signed int (uV) |
+| false | TYPE_DEBUG | 0x3D |  | debug |
 
 ## extend List
 To add your own datatypes please refer to /src/construct_TYPE.h and /extras/Decoder.js
