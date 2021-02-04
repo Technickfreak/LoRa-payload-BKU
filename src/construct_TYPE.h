@@ -7,6 +7,7 @@ namespace Bku
     typedef enum
     {
         //TYPE_TEMP = 0x01,
+        //Python-script-Marker#\t\t{1} = {2},\t\t//{3};\t\t{8}\n#
 		TYPE_TEMP = 0x01,		//temperature;		-3276.8°C->3276.7°C
 		TYPE_ACC = 0x03,		//["Acceleration","x","y","z"];		X,Y,Z -128->127 +/-63 1G
         
@@ -21,6 +22,7 @@ namespace Bku
         {
             switch (type)
             {
+            //Python-script-Marker#\t\t\tcase {1}: \n\t\t\t\treturn {4};\n#
 			case TYPE_TEMP: 
 				return 2;
 			case TYPE_ACC: 
@@ -37,6 +39,7 @@ namespace Bku
         {
             switch (type)
             {
+            //Python-script-Marker#\t\t\tcase {1}: \n\t\t\t\treturn {6};\n#
 			case TYPE_TEMP: 
 				return 1;
 			case TYPE_ACC: 

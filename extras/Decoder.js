@@ -1,10 +1,12 @@
 //var TYPE_TEMP           = 0x01;  //temperature;           3276.8°C --> 3276.7°C;
+//Python-script-Marker#var {1} = {2};      //{3};      {8}\n#
 var TYPE_TEMP = 0x01;      //temperature;      -3276.8°C->3276.7°C
 var TYPE_ACC = 0x03;      //["Acceleration","x","y","z"];      X,Y,Z -128->127 +/-63 1G
 
 
 function TYPE_Name_relation(TYPE_ID) {
     switch (TYPE_ID) {
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {3};\n#
 		case TYPE_TEMP: 
 			return temperature;
 		case TYPE_ACC: 
@@ -17,6 +19,7 @@ function TYPE_Name_relation(TYPE_ID) {
 }
 function TYPE_byte_amount(TYPE_ID) {
     switch (TYPE_ID) {
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {5};\n#
 		case TYPE_TEMP: 
 			return 2;
 		case TYPE_ACC: 
@@ -28,6 +31,7 @@ function TYPE_byte_amount(TYPE_ID) {
 }
 function TYPE_decimal_places(TYPE_ID) {
     switch (TYPE_ID) {
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {6};\n#
 		case TYPE_TEMP: 
 			return 1;
 		case TYPE_ACC: 
@@ -39,6 +43,7 @@ function TYPE_decimal_places(TYPE_ID) {
 }
 function TYPE_with_sign(TYPE_ID) {
     switch (TYPE_ID) {
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {7};\n#
 		case TYPE_TEMP: 
 			return true;
 		case TYPE_ACC: 
