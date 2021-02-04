@@ -1,10 +1,10 @@
 //var TYPE_TEMP           = 0x01;  //temperature;           3276.8°C --> 3276.7°C;
-//Python-Marker#var {1} = {2};      //{3};      {8}
+//Python-script-Marker#var {1} = {2};      //{3};      {8}\n#
 
 
 function TYPE_Name_relation(TYPE_ID) {
     switch (TYPE_ID) {
-        //Python-Marker#\t\tcase {1}: \n\t\t\treturn {3};
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {3};\n#
 
         default:
             return 0;
@@ -13,7 +13,7 @@ function TYPE_Name_relation(TYPE_ID) {
 }
 function TYPE_byte_amount(TYPE_ID) {
     switch (TYPE_ID) {
-        //Python-Marker#\t\tcase {1}: \n\t\t\treturn {5};
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {5};\n#
 
         default:
             return 0;
@@ -21,7 +21,7 @@ function TYPE_byte_amount(TYPE_ID) {
 }
 function TYPE_decimal_places(TYPE_ID) {
     switch (TYPE_ID) {
-        //Python-Marker#\t\tcase {1}: \n\t\t\treturn {6};
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {6};\n#
 
         default:    //all other 0 decimal_places
             return 0;
@@ -29,7 +29,7 @@ function TYPE_decimal_places(TYPE_ID) {
 }
 function TYPE_with_sign(TYPE_ID) {
     switch (TYPE_ID) {
-        //Python-Marker#\t\tcase {1}: \n\t\t\treturn {7};
+        //Python-script-Marker#\t\tcase {1}: \n\t\t\treturn {7};\n#
 
         default:    //all other unsigned
             return false;

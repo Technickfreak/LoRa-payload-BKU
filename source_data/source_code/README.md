@@ -45,7 +45,7 @@ BkuPayload meinpayload[] = {
 ## supported datatypes
 ELSYS.se compatible
 <!--TYPE_TEMP           = 0x01;  //temperature;         2 bytes;    1 decimal place;    -3276.8°C->3276.7°C;-->
-<!--Python-readme-Marker#| {0} | {1} | {2} | {3} | {4} | {6} | {9} | {10} |\n#-->
+<!--Python-readme-Marker#| {0} | {1} | {2} | {8} | {9} |\n#-->
 
 ## extend List
 To add your own datatypes please refer to /src/construct_TYPE.h and /extras/Decoder.js
