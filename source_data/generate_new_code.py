@@ -29,13 +29,11 @@ for path, subdirs, files in os.walk(source_code_folder):
         target_file = open(target_path, "a")
         source_file = open(source_path, "r")
         for line in source_file:
-            #target_file.write(line)
-            if line.find("Python-Marker") != -1:
+            
+            if line.find("Python-script-Marker") != -1:
+                target_file.write(line)
                 x = line.split("#")
-
-                #swith case
-                
-                form =(x[len(x)-1])
+                form =(x[len(x)-2])
                 form = form.replace("\\n", "\n")
                 form = form.replace("\\t", "\t")
                 with open(source_table_temp) as csvdatei:
@@ -44,6 +42,16 @@ for path, subdirs, files in os.walk(source_code_folder):
                         if row[0] == "true":
                             target_file.write(form.format(*row))
                             #target_file.write(line_form.format(*row))
+            elif line.find("Python-readme-Marker") != -1:
+                x = line.split("#")
+                form =(x[len(x)-2])
+                form = form.replace("\\n", "\n")
+                form = form.replace("\\t", "\t")
+                with open(source_table_temp) as csvdatei:
+                    csv_reader_object = csv.reader(csvdatei, delimiter=';')
+                    for row in csv_reader_object:
+                        #if row[0] == "true":
+                        target_file.write(form.format(*row))
             else:
                 target_file.write(line)
         target_file.close()
