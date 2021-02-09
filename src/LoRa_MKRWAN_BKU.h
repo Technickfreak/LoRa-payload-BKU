@@ -1,6 +1,10 @@
 #pragma once
 
-#ifndef _LoRa_payload_BKU_h
+#ifdef _LoRa_payload_BKU_h
+#warning es wurden mehrere Bords Geladen.
+//#endif
+//#ifndef _LoRa_payload_BKU_h
+#else
 #define _LoRa_payload_BKU_h
 
 
