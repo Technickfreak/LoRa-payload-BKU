@@ -1,0 +1,7 @@
+Bords				;SetupLoraBku()		;SendDataLoraBku()	;SendPayloadLoraBku()	;PrintMSGLoraBku()	;ReceiveDataLoraBku()
+---					;:---:				;:---:				;:---:					;:---:				;:---:
+MKRWAN 13xx			;[X]				;[X]				;[X]					;[X]				;[X]
+CubeCell-1/2AA		;[ ]				;[ ]				;[ ]					;[ ]				;[ ]
+WiFi LoRa 32(V2)	;[ ]				;[ ]				;[ ]					;[ ]				;[ ]
+
+</li></ul> [ ] </li></ul>
