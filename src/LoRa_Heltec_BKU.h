@@ -15,12 +15,11 @@
 
 
 #include <TTN_esp32.h>
-#include "TTN_CayenneLPP.h"
 #include "heltec.h"
 
 
 
-
+TTN_esp32 ttn;
 
 //TTN Keys
 const char* devEui = "CHANGE_ME"; // Change to TTN Device EUI
@@ -40,7 +39,7 @@ namespace Bku
         String devEui;
         String appEui;
         String appKey;
-        _lora_band frequency = EU868;
+        //_lora_band frequency = EU868;
 
         void connectToTTN() //Method to connect to TTN
         {
