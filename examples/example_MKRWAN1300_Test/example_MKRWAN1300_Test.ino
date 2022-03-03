@@ -1,4 +1,9 @@
-#include <LoRa_payload_BKU.h>
+#include <LoRa_MKRWAN_BKU.h>
+// #include <LoRa_CubeCell_BKU.h>
+// #include <LoRa_Heltec_BKU.h>
+
+
+
 
 using namespace Bku;
 //use your secrets.h file or enter appEui & appKey below

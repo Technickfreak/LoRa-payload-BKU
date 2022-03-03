@@ -1,5 +1,8 @@
 #include <Zanshin_BME680.h>
-#include <LoRa_payload_BKU.h>
+#include <LoRa_MKRWAN_BKU.h>
+// #include <LoRa_CubeCell_BKU.h>
+// #include <LoRa_Heltec_BKU.h>
+
 
 //Create an instance of the sensor
 BME680_Class BME680;
